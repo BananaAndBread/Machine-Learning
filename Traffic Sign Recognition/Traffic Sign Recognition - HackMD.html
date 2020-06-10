@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="csrf-token" content="CJfjhM8W-wIHs_B-9L656nct2g0SvOYxHmfo">
+    
+    
+    <meta name="description" content=" # Traffic Sign Recognition   Imagine you are working in self-driving project as a machine learning ">
+    
+    <title>Traffic Sign Recognition - HackMD</title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+	<link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+    
+<script nonce="208bb191-9f54-48d8-af67-cf1eb1a24d2c">
+window.domain = 'hackmd.io'
+window.urlpath = ''
+window.debug = false
+window.version = '1.3.0'
+window.brand = 'HackMD'
+
+window.GOOGLE_API_KEY = 'AIzaSyCjSrqWHhmWJnoI7JlD88XDSaBgiKbaenA'
+window.GOOGLE_CLIENT_ID = '911617723593-drikdibvvn63slfd6kbqigo8ql1no55s.apps.googleusercontent.com'
+window.DROPBOX_APP_KEY = 'rdoizrlnkuha23r'
+
+
+window.ASSET_URL = 'https://assets.hackmd.io'
+
+window.USER_CAN_CREATE_TEAM = true
+window.PAYMENT_ENABLED = true
+window.FREE_TEAM_NUM = 3
+window.FREE_TEAM_MEMBER_NUM = 3
+window.FREE_PUBLIC_TEAM_NUM = 10
+
+window.EE_SITE_ENABLE = false
+window.EE_SITE_NAME = 'false'
+window.EE_SITE_LINK = 'false'
+
+window.ALLOW_ANONYMOUS = true
+window.PUBLIC_OVERVIEW = false
+window.INTERNAL_PUBLIC_OVERVIEW = false
+
+
+window.SHOW_HOT_NOTES = false
+
+
+
+window.HOT_NOTES_TIME_TYPE = 'week'
+
+
+
+window.SHOW_OVERVIEW = false
+
+
+window.USE_CDN = false
+
+
+window.MENTIONS = {}
+
+
+
+window.MENTION_ANCHORS = null
+
+
+
+window.COMMENT_ANCHORS = []
+
+
+
+window.IS_OWNER = false
+
+
+
+window.IS_TEAM_ADMIN = false
+
+
+
+window.IS_INVITEE_ADMIN = false
+
+
+
+window.USER_PROFILE = {"name":"Guest Ward"}
+
+
+
+window.VERSION_TIME = '1571297785670'
+
+
+ 
+window.canEdit = false
+
+
+ 
+window.canWriteComment = false
+
+
+</script>
+
+
+    
+<!-- Google Tag Manager -->
+<script nonce="208bb191-9f54-48d8-af67-cf1eb1a24d2c">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KLW9Z3');</script>
+<!-- End Google Tag Manager -->
+
+
+    <meta property="fb:app_id" content="1436904003272070">
+
+<meta name="twitter:image:src" content="https://lh6.googleusercontent.com/-wxqqy-_GfZQ/AAAAAAAAAAI/AAAAAAAAANI/KmxG0B98KSg/photo.jpg?sz=96" />
+
+<meta name="twitter:site" content="@hackmdio" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Traffic Sign Recognition - HackMD" />
+
+<meta name="twitter:description" content=" # Traffic Sign Recognition   Imagine you are working in self-driving project as a machine learning " />
+
+
+<meta property="og:image" content="https://lh6.googleusercontent.com/-wxqqy-_GfZQ/AAAAAAAAAAI/AAAAAAAAANI/KmxG0B98KSg/photo.jpg?sz=96" />
+
+<meta property="og:site_name" content="HackMD" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Traffic Sign Recognition - HackMD" />
+
+<meta property="og:description" content=" # Traffic Sign Recognition   Imagine you are working in self-driving project as a machine learning " />
+
+
+	
+    <link rel="stylesheet" href='https://assets.hackmd.io/build/emojify.js/dist/css/basic/emojify.min.css'>
+     <link href="https://assets.hackmd.io/build/font-vendor.b86e2bf451b246b1a88e.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/common-vendor.b8ecfc406ac0b5f77a26.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty-vendor.83ac49e057c3eac4fce3.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty.384f5a01e13e13e1e815.css" rel="stylesheet">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+<![endif]-->
+
+</head>
+
+<body style="display:none;">
+    <div class="ui-infobar container-fluid unselectable hidden-print">
+        <div class="row">
+            <div class="col-xs-12 ui-infobar-inner">
+                <div class="ui-infobar__user-info">
+                    <ul class="list-inline">
+                        <li>
+                            
+                                <span class="ui-lastchangeuser" data-profile="BkJ0iNYsTXyETU18nTd2pA">&thinsp;<a class="ui-user-icon small" style="background-image: url(https://lh6.googleusercontent.com/-wxqqy-_GfZQ/AAAAAAAAAAI/AAAAAAAAANI/KmxG0B98KSg/photo.jpg?sz=96);" target="_blank"></a></span>
+                            
+                            &nbsp;<span class="text-uppercase ui-status-lastchange"></span>
+                            <span class="ui-lastchange text-uppercase" data-createtime="Wed Oct 02 2019 10:37:45 GMT+0000 (UTC)" data-updatetime="Thu Oct 17 2019 07:36:25 GMT+0000 (UTC)"></span>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+
+                <div class="text-right ui-infobar__actions">
+                    <ul class="list-inline">
+                        
+                        <li>
+                            
+                                <a class="ui-signin btn btn-default text-muted" href="#"><span>Subscribe</span></a>
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        
+        <div class="ui-comment-app" id="hackmd-app">
+            <div id="comment-app"></div>
+        </div>
+        
+    </div>
+    <div id="doc" class="container-fluid markdown-body" data-hard-breaks="true">
+# Traffic Sign Recognition 
+
+Imagine you are working in self-driving project as a machine learning engineer. One of the important problems for self-driving cars is to follow traffic signs. A car moves and collects video from the front camera. In each separate image you could localize the signs and after that understand what sign did we find.
+
+We can assume that someone else is responsible for localizing and tracking signs, and your task is to do the classification part.
+
+In this assignment you will be asked to develop a traffic sign recognition system. It should take a sign image with a small context around it and classify which of 43 signs it belongs to.
+
+In addition to code you will send a report.
+
+# Dataset
+
+In this problem you will be given a benchmark dataset [The German Traffic Sign Recognition Benchmark: A multi-class classification competition](https://www.researchgate.net/publication/224260296_The_German_Traffic_Sign_Recognition_Benchmark_A_multi-class_classification_competition). 
+
+![](https://www.researchgate.net/profile/Marc_Schlipsing/publication/224260296/figure/fig1/AS:648242664595473@1531564503803/A-single-traffic-sign-track.png)
+
+
+Here is a information, [provided](http://benchmark.ini.rub.de/?section=gtsrb&amp;subsection=dataset) by autors:
+
+#### Overview
+
+ 
+
+*    Single-image, multi-class classification problem
+*    More than 40 classes
+*    More than 50,000 images in total
+*    Large, lifelike database
+*    Reliable ground-truth data due to semi-automatic annotation
+*    Physical traffic sign instances are unique within the dataset
+    (i.e., each real-world traffic sign only occurs once)
+
+ 
+#### Structure
+
+The training set archive is structured as follows:
+
+ *   One directory per class
+ *   Each directory contains one CSV file with annotations (&#34;GT-\&lt;ClassID\&gt;.csv&#34;) and the training images
+ *   Training images are grouped by tracks
+ *   Each track contains 30 images of one single physical traffic sign
+
+
+#### Image format
+
+ *   The images contain one traffic sign each
+ *   Images contain a border of 10 % around the actual traffic sign (at least 5 pixels) to allow for edge-based approaches
+ *   Images are stored in PPM format (Portable Pixmap, P6)
+ *   Image sizes vary between 15x15 to 250x250 pixels
+ *   Images are not necessarily squared
+ *   The actual traffic sign is not necessarily centered within the image.This is true for images that were close to the image border in the full camera image
+ *   The bounding box of the traffic sign is part of the annotatinos (see below)
+
+ 
+#### Annotation format
+
+Annotations are provided in CSV files. Fields are separated by &#34;;&#34;   (semicolon). Annotations contain the following information:
+
+ *   Filename: Filename of corresponding image
+ *   Width: Width of the image
+  *  Height: Height of the image
+  *  ROI.x1: X-coordinate of top-left corner of traffic sign bounding box
+ *   ROI.y1: Y-coordinate of top-left corner of traffic sign bounding box
+ *   ROI.x2: X-coordinate of bottom-right corner of traffic sign bounding box
+ *   ROI.y2: Y-coordinate of bottom-right corner of traffic sign bounding box
+
+
+The training data annotations will additionally contain
+
+ *   ClassId: Assigned class label
+
+
+# Task
+Here is a sequence of steps you should do in this assignment. 
+
+### Download
+
+Download the [dataset](https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/published-archive.html). Use *GTSRB_Final_Training_Images.zip* for training and *GTSRB_Final_Test_Images.zip* + *GTSRB_Final_Test_GT.zip* for testing.
+
+
+And [here](http://benchmark.ini.rub.de/Dataset/GTSRB_Python_code.zip) is a script which reads the data, you can use it in your code.
+
+### Transform images to same size
+
+
+Train and test images differ in size and shape: some of them are square, others are rectangular.
+
+To be able to produce the same number and kind of features from all images, we must ensure they have the same size. For this, you are asked to:
+
+1) Padd rectangular images to square shape - add zero pixels to the shorter side. Alternatively, you can duplicate border pixels of the shorter side to get the required square shape.
+
+2) When all images have the desired square shape, resize them to the same dimensionality - 30x30 pixels.
+
+Include in the **Report** the result of padding: take any picture from the dataset and show its original and padded version. 
+
+
+### Split data
+
+Write your own implementation of the train-validation split (not using sklearn or any other ready implementation) and split your data in 80%-20% proportion. Pay attention to the fact that images are organized in tracks - there are 30 photos (video frames) for each sign taken from different distances. Make sure that images from the particular track end up being in either training or validation split, otherwise validation will be faulty (Think why?).
+
+Don&#39;t forget to shuffle your data.
+
+### Frequencies
+Find class frequencies in the resulting training set.
+Include a bar chart in your **Report**. It should be done after reducing the amount of data, if your did it.
+
+### Augmentation
+
+You can see from the bar-chat you&#39;ve just produced that the classes are are highly imbalanced.
+
+One of the ways to overcome this problem is to produce synthetic images from the existing ones and then add them to the training set (we already know their labels, right?). This is called data augmentation and it is a very common technique, especially in the images domain. Check these resources ([1](http://courses.d2l.ai/berkeley-stat-157/slides/3_14/image-augmentation.pdf), [2](https://medium.com/@ODSC/image-augmentation-for-convolutional-neural-networks-18319e1291c)) to see what are the possible ways to augment your data and choose two-three techniques that are appropriate in our particular case. In the **Report** you should *justify your choice* and provide examples of augmentation (original vs augmented images). 
+
+NB! The number of images of each class should be the same after the augmenation.
+
+![image alt](https://i.imgur.com/z4Kxfq8.png)
+]
+
+### Image normalization
+
+Normalize every image separately such that pixel values are between 0 and 1. Do it for both train and valiation splits. 
+
+### What are the features?
+
+Finally, we represented all pixels as a number from 0 to 1. Now for each image we can ravel this matrix and present each sample as 1-dimentional vercor whith the same size.
+Stack those vectors to matrix.
+
+### Train model
+
+Train RandomForest trafic signs classifier based on your training data.
+
+
+### Evaluate
+All estimates in this section should be described in the **Report**.
+
+First, calculate the resulting *overall accuracy* on the test set. 
+
+However, this estimate is not very representative for all classes - some are underrepresented. Hence, measure recall and precision for each class separately to analyze problem areas. 
+
+Also, visualize samples that were classified incorrectly and add them to the **Report**
+
+
+### Experiment and analyze!
+Now, when you have the base model, it&#39;s time to do the performance analysis. 
+
+1) Try training the model on non-augmented data. Compare models&#39; performance. Analyze the effect of augmentation. Describe your findings in the **Report** 
+
+2) Try changing the size of the images. Does increasing it results in better performance? Choose 5 different size options and include to the **Report** 2 plots: how accuracy and time depends on image size.
+
+
+
+# Code structure
+
+Organize your code in such way to make all experiments without rerun your script with different paramethers or copypasting large blocks of code inside it.
+
+
+# Submission
+
+You should submit 2 files without an archive:
+
+1. *.py* script file with your code
+2. *.pdf* report
+
+# Report
+
+Read [Report guidelines](https://hackmd.io/J89FQKJdRWmZCtku1pP04w?view). 
+
+Everything with a label **Report** should be included, but not only. Make sure it satisfy guidelines.
+
+# Policies
+
+Taking others code or allow somebody else to see your code is not allowed. The same for your report. You might discuss ideas and problems with your classmate without sharing code and reprot.
+
+# References
+
+[The German Traffic Sign Recognition Benchmark: A multi-class classification competition](https://www.researchgate.net/publication/224260296_The_German_Traffic_Sign_Recognition_Benchmark_A_multi-class_classification_competition)
+
+
+[Preprocessed images](https://www.kaggle.com/valentynsichkar/traffic-signs-preprocessed)
+
+[Report guidelines](https://hackmd.io/J89FQKJdRWmZCtku1pP04w?view)
+
+
+
+&lt;!-- # Comments
+### HOG --&gt;
+
+&lt;!-- In computer vision we often use *descriptors* instead of the raw pixels data. It could be considered as a feature selection for computer vision problems. One of the most popular *global descriptor* is a *Histogram of Oriented Gradients*. For this task you might consider this algorithm as a blackbox. However, if interested, you can check [this link](https://www.learnopencv.com/histogram-of-oriented-gradients/), to get more details.  Find the appropriate paramethers which gives you a maximum accuracy. 
+
+```
+ import cv2
+ hog = cv2.HOGDescriptor()
+ im = cv2.imread(sample)
+ h = hog.compute(im)
+ ```
+)
+ --&gt;</div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-left dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="display:none;"></div>
+    
+
+    <div class="clearfix"></div>
+    <footer class="hidden-print">
+        <div class="container-thiner">
+            <div class="footer">
+                <div class="footer__published-by">
+                    Published on <strong><a href="https://hackmd.io/" target="_blank"><i class="fa fa-file-text"></i> HackMD</a></strong>
+                </div>
+                <div class="footer__views">
+                    <i class="fa fa-eye"></i> <span class="ui-viewcount">1654</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- signin modal -->
+<div class="modal fade signin-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 10px; right: 20px; position: absolute;"><span aria-hidden="true">&times;</span></button>
+            
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<h3>Sign in</h3>
+
+<form data-toggle="validator" role="form" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="dn"><input type="hidden" name="_csrf" value="CJfjhM8W-wIHs_B-9L656nct2g0SvOYxHmfo"></div>
+    <div class="dn"><input type="hidden" name="create_team" value="false"></div>
+    <div class="dn"><input type="hidden" name="create_paid_team" value="false"></div>
+    <div class="form-group  ">
+        <label for="email" class="control-label">Email</label>
+        <label for="inputEmail" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="display: inline;"></span>
+        <div class="input-block">
+            
+                <input type="email" class="form-control" name="email" placeholder="Your email" required autocomplete="email">
+            
+            <span class="error-sign"></span>
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="password" class="control-label">Password</label>
+        <label for="inputPassword" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="display: inline;"></span>
+        <div class="input-block">
+            <input type="password" class="form-control" name="password" placeholder="Your password" required autocomplete="current-password">
+            <span class="error-sign"></span>
+            
+                <span class="control-label pull-right" style="font-size: 13px; margin-top: 5px;"><a href="https://hackmd.io/settings/forgotPassword" style="text-decoration: underline;">Forgot password</a></span>
+            
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 15px; margin-bottom: 0px;">
+        
+            <input type="submit" class="btn btn-success btn-large" formaction="https://hackmd.io/login" value="Sign in">
+        
+
+        
+    </div>
+</form>
+
+
+
+
+
+
+
+
+    
+        <p class="seperator">или</p>
+    
+
+    
+        <p>By clicking below, you agree to our <a href="https://hackmd.io/s/terms" target="_blank">terms of service</a>.</p>
+    
+
+    <div class="social-buttons-container">
+    
+    <a href="https://hackmd.io/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
+        <i class="fa fa-facebook"></i> Войти с помощью Facebook
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/twitter" class="btn btn-lg btn-block btn-social btn-twitter">
+        <i class="fa fa-twitter"></i> Войти с помощью Twitter
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/github" class="btn btn-lg btn-block btn-social btn-github">
+        <i class="fa fa-github"></i> Войти с помощью GitHub
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/dropbox" class="btn btn-lg btn-block btn-social btn-dropbox">
+        <i class="fa fa-dropbox"></i> Войти с помощью Dropbox
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/google" class="btn btn-lg btn-block btn-social btn-google">
+        <i class="icon icon-google"></i> Войти с помощью Google
+    </a>
+    
+    
+</div>
+
+
+
+
+
+    <div >
+        <p>New to HackMD? <a href="https://hackmd.io/join">Sign up</a></p>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-60728495-1"></script>
+<script nonce="208bb191-9f54-48d8-af67-cf1eb1a24d2c">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    let userid = (document.cookie.match('(^|; )userid=([^;]*)')||0)[2];
+    gtag('config', 'UA-60728495-1', {'user_id': userid});
+</script>
+<script src="https://browser.sentry-cdn.com/5.15.5/bundle.min.js" crossorigin="anonymous"></script>
+<script nonce="208bb191-9f54-48d8-af67-cf1eb1a24d2c">Sentry.init({ dsn: 'https://73410f1915d84abc8b2dd1f1aabd1c82@sentry.hackmd.dev/4', environment: 'production', integrations: function (intrus) { return intrus.filter(function (itr) { return itr.name !== 'TryCatch' }) } });</script>
+
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLW9Z3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+    <script src="https://hackmd.io/api/i18n.js"></script>
+    
+         <script src="https://assets.hackmd.io/build/font-vendor.3c28db3001b8bd6f1d3f.js" defer="defer"></script><script src="https://assets.hackmd.io/build/common-vendor.8e4f4d6aba4d3616fff5.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-vendor.97ba4f331e5cf852bb65.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-common.4898c7d7c1f70fd6fa0c.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty.6e4aeda1326a2a5f5aab.js" defer="defer"></script>
+    
+    
+
+</body>
+</html>

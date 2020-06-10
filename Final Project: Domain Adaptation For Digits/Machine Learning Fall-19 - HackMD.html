@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="csrf-token" content="DMXWwRaJ-YMpf9LC-V9-fg3H1CwZigmRsGwA">
+    
+    
+    <meta name="description" content="View the slide with &#34;Slide Mode&#34;.">
+    
+    <title>Domain Adaptation Final Project - HackMD</title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+	<link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+    
+<script nonce="09fcc7f9-01cb-4f44-b548-30602ab8568c">
+window.domain = 'hackmd.io'
+window.urlpath = ''
+window.debug = false
+window.version = '1.3.0'
+window.brand = 'HackMD'
+
+window.GOOGLE_API_KEY = 'AIzaSyCjSrqWHhmWJnoI7JlD88XDSaBgiKbaenA'
+window.GOOGLE_CLIENT_ID = '911617723593-drikdibvvn63slfd6kbqigo8ql1no55s.apps.googleusercontent.com'
+window.DROPBOX_APP_KEY = 'rdoizrlnkuha23r'
+
+
+window.ASSET_URL = 'https://assets.hackmd.io'
+
+window.USER_CAN_CREATE_TEAM = true
+window.PAYMENT_ENABLED = true
+window.FREE_TEAM_NUM = 3
+window.FREE_TEAM_MEMBER_NUM = 3
+window.FREE_PUBLIC_TEAM_NUM = 10
+
+window.EE_SITE_ENABLE = false
+window.EE_SITE_NAME = 'false'
+window.EE_SITE_LINK = 'false'
+
+window.ALLOW_ANONYMOUS = true
+window.PUBLIC_OVERVIEW = false
+window.INTERNAL_PUBLIC_OVERVIEW = false
+
+
+window.SHOW_HOT_NOTES = false
+
+
+
+window.HOT_NOTES_TIME_TYPE = 'week'
+
+
+
+window.SHOW_OVERVIEW = false
+
+
+window.USE_CDN = false
+
+
+window.MENTIONS = {}
+
+
+
+window.MENTION_ANCHORS = null
+
+
+
+window.COMMENT_ANCHORS = []
+
+
+
+window.IS_OWNER = false
+
+
+
+window.IS_TEAM_ADMIN = false
+
+
+
+window.IS_INVITEE_ADMIN = false
+
+
+
+window.USER_PROFILE = {"name":"Guest Ward"}
+
+
+
+window.VERSION_TIME = '1574528981292'
+
+
+ 
+window.canEdit = false
+
+
+ 
+window.canWriteComment = true
+
+
+</script>
+
+
+    
+<!-- Google Tag Manager -->
+<script nonce="09fcc7f9-01cb-4f44-b548-30602ab8568c">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KLW9Z3');</script>
+<!-- End Google Tag Manager -->
+
+
+    <meta property="fb:app_id" content="1436904003272070">
+
+<meta name="twitter:image:src" content="https://i.imgur.com/8lpER2E.jpg" />
+
+<meta name="twitter:site" content="@hackmdio" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Domain Adaptation Final Project - HackMD" />
+
+<meta name="twitter:description" content="View the slide with &#34;Slide Mode&#34;." />
+
+
+<meta property="og:image" content="https://i.imgur.com/8lpER2E.jpg" />
+
+<meta property="og:site_name" content="HackMD" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Domain Adaptation Final Project - HackMD" />
+
+<meta property="og:description" content="View the slide with &#34;Slide Mode&#34;." />
+
+
+	
+    <link rel="stylesheet" href='https://assets.hackmd.io/build/emojify.js/dist/css/basic/emojify.min.css'>
+     <link href="https://assets.hackmd.io/build/font-vendor.b86e2bf451b246b1a88e.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/common-vendor.b8ecfc406ac0b5f77a26.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty-vendor.83ac49e057c3eac4fce3.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty.384f5a01e13e13e1e815.css" rel="stylesheet">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+<![endif]-->
+
+</head>
+
+<body style="display:none;">
+    <div class="ui-infobar container-fluid unselectable hidden-print">
+        <div class="row">
+            <div class="col-xs-12 ui-infobar-inner">
+                <div class="ui-infobar__user-info">
+                    <ul class="list-inline">
+                        <li>
+                            
+                                <span class="ui-lastchangeuser" data-profile="ImadBek">&thinsp;<a class="ui-user-icon small" style="background-image: url(https://i.imgur.com/8lpER2E.jpg);" target="_blank"></a></span>
+                            
+                            &nbsp;<span class="text-uppercase ui-status-lastchange"></span>
+                            <span class="ui-lastchange text-uppercase" data-createtime="Thu Oct 10 2019 12:53:09 GMT+0000 (UTC)" data-updatetime="Sat Nov 23 2019 17:09:41 GMT+0000 (UTC)"></span>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+
+                <div class="text-right ui-infobar__actions">
+                    <ul class="list-inline">
+                        
+                        <li>
+                            
+                                <a class="ui-signin btn btn-default text-muted" href="#"><span>Subscribe</span></a>
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        
+        <div class="ui-comment-app" id="hackmd-app">
+            <div id="comment-app"></div>
+        </div>
+        
+    </div>
+    <div id="doc" class="container-fluid markdown-body" data-hard-breaks="true">---
+title: Domain Adaptation Final Project
+tags: Final Project, Introduction to ML, Innopolis
+description: View the slide with &#34;Slide Mode&#34;.
+---
+
+# Machine Learning Fall-19
+# Innopolis University
+# Final Project: Domain Adaptation for Digits 
+
+## Goals
+
+The goal of this Final Project is to help the student gain experience in:
+1. Building machine learning models with different components.
+2. Experience generalization problems of machine learning models.
+3. Apply his/her machine learning knowledge, especially on ANNs, AEs, CNNs, etc. 
+4. Read research papers and implement them.
+
+## Domain Adaptation
+Imagine you work at airbnb`a platform for renting houses`, you are building a model that classifies houses into: `verry bad, bad, average, good, verry good`. 
+You build the model using the best data you can find with images taken by professional photographers because you want your model to learn from high quality data.
+You trainde the model, and then tested it on the test data and got 96% accuracy.
+The model was deployed, but the customers complained about the performance of your model a lot.
+The problem was that your clients are using low quality cell-phone generated images. 
+This change in image quality or in general terms, change in data distribution`also refered to as concept drift, concept shift.` dropped the model&#39;s performances. 
+And this is the problem domain adaptation tries to fix.
+
+More formally, let $D^s$ and $D^t$ be the source and target domains, respectively. Domain adaptation (DA), which is a sub-field of transductive transfer learning (TTL), aims to solve a problem in $D^t$, where data are hard to collect, using data from $D^s$. Both domains, usually, share the same tasks (i.e., $T^s$ = $T^t$) but the marginal distributions of the inputs differ (i.e., $P(X^s)≠P(X^t)$).
+
+Similar to other machine learning tasks, DA can be split into supervised, unsupervised and semi-supervised depending on how much labeled data are available from $D^t$. For supervised domain adaptation (SDA)  and semi-supervised domain adaptation (SSDA), the data are completely or partially labeled but it is not sufficient enough to train an accurate model for the target domain from scratch. In unsupervised domain adaptation (UDA) the target domain samples are completely unlabeled, which is useful in situations where the data collection process is easy but the data labeling process is time consuming.
+
+Most of the previous UDA approaches aim at achieving two targets: (i) produce (or learn) feature vectors from the data from  $D^s$ that can be used by a classifier to get highly accurate class labels, and (ii) make the features of both $D^s$ and $D^t$  indistinguishable.
+
+
+
+## Dataset 
+We will apply domain adaptation on digitis. Mainly because the images are small so they dont require a lot of computations and because most of the papers use it for evaluating their models. We have two datasets:
+**MNIST:**
+MNIST is a handwritten-digit dataset, where all images are in greyscale and have digits in a fixed orientation.
+![](https://i.imgur.com/cdcChyD.png)
+**SVHN:**
+SVHN images are real-world RGB images of digits (in different orientations) taken from street house numbers.
+![](https://i.imgur.com/MbzxYc3.jpg)
+
+
+The domain gap results from such differences in style, brightness, and contrast, among others.
+
+Domain adaptation aims at closing the above-mentioned gap between different datasets, such that an image classification model trained on SVHN would perform well on MNIST images, too.
+
+For the purpose of this Project we will consider.
+* SVHN: source domain.
+* MNIST: target domain
+
+
+## Task
+The task is very flexible, all you need to do is build a classifier that gives good results on mnist while respecting the constraints of domain adaptation.
+
+**Constraints of Unsupervised Domain Adaption**
+Training:
+1. Access to source domain labels.
+2. No Access to target domain labels.
+3. Access to images from both domains.
+
+Meaning you can use source domain with the labels but target domain you cannot use its labels for training.
+
+Testing:
+1. Accuracy on target domain is the goal.
+2. Accuracy on source domain is not important.
+
+We chose the accuracy on mnist(target domain) test data because it is the best best measure for evaluating how good your model is and because it is very widely used in research papers.
+
+**General Guidelines**
+1. Use any library, pytorch or tensorflow (at your own expence).
+2. Build a baseline model by using and combining the code from your labs. 
+3. Use any github (or other publically available) code to get better results than your baseline model.
+4. Implement any paper by yourself (better than 3). 
+5. Implement and mix techniques from differnet papers (better than 4).
+6. Create your own new technique (better than 5).
+7. Provide a reference to any code that you use or the paper(s) that you implement.
+8. Use a seed so that your results are regeneratable.
+
+
+
+
+
+
+**Grading**
+1. By the end of the first week, every student must implement and submit the baseline model (2). This will get you 50 points.
+2. for every day after deadline we deduct 5 points if you didnt submit the baseline.
+3. Over the next two weeks, you can improve upon the baseline scores by doing any from (3 - 6). 
+4.a For 3 (+10 points)
+5.b For 4 (+20 points)
+6.c For 5 (+ 30 points)
+7.d For 6 (+40 points)
+8. Apart from the code (which should be properly structured and commented), you will also submit a report (10 points). The report should explain the following:
+9.a Details of the baseline model and its results (2 Points)
+10.b Details of the Improved method (one of 3-6) (5 Points)
+11.c Discussion on your results and the lessons that you learned from them (3 Points)
+
+## Submission
+**First Week Submission**
+Code:
+1. Python notebooks not allowed.
+2. A simple CNN.
+3. Data loader in pytorch exist by default. (do not use svhn extra)
+4. train on SVHN-train.
+5. Test on MNIST-test.
+6. your code should output only one value, (the accuracy on MNIST-TEST) range(0,100).
+
+
+Report:
+1. What is the accuracy on svhn-train.
+2. What is the accuracy on svhn-test.
+3. What is the accuracy on mnist-test.
+4. Explain your baseline model, how many layers?
+5. Try different techniques and give the three accuracies mentioned above with and without them. (Batch-norm, different activations, different Optimizers, dropout, etc) (BONUS TASK).
+6. Discuss the results with regards to Domain Adaptation. 
+
+
+
+Contraint:
+1. Accuracy on mnist-test must be over 60.
+
+
+
+**Final Submission**
+Code:
+1. Colab links with the code already run (we should see your results in the output box).
+2. Please follow the guidelines.
+3. Data loader in pytorch exist by default. (do not use svhn extra)
+4. train on SVHN-train.
+5. You can use mnist-train but only the images.
+6. Test on MNIST-test.
+7. Use Xavier Initialization, and ADAM Optimiser.
+8. Your code should converge at the end. (the last 10 accuracies should not be very differnet from each other.)
+
+
+
+Report:
+2. Explain your model (Use English, Math, and optional figures)
+3.  How is your submission different from first submission? 
+4.  Is your solution taken from an existing paper (provide pdfs), or is it your own idea? 
+5.   Explain how does your solution implement domain adaptaion? 
+6.    List all important hyper-parameters; How did you tune HPs? 
+7. Accuracy (a) on svhn-train, (b) on svhn-test, (c) on mnist-test. Each of these should be provided for the whole the training period -- use graphs to illustrate that.
+11. Provide Plots of Latent space to show the domain Invariance and category informative. (before training,before doing DA and after DA).
+12. Perform an abalation study on your model. (remove some parts of the model and report the new accuracies) (BONUS TASK).
+13. Personal Thoughts:  What did you learn from your results? Were you able to solve domain gap? What part of your model can be improved further to get better results, and why?
+
+Grading:
+
+* First submission :50%
+* Final submission code: 10%
+* Final submission report: 40%
+* Bonus is discussed above
+
+## References
+1. [Tutorial on Domain Adaptation](https://www.youtube.com/watch?v=F2OJ0fAK46Q)
+2. [Unsupervised Pixel-Level Domain Adaptation With Generative Adversarial Networks](https://www.youtube.com/watch?v=VhsTrWPvjcA)
+3. [Duplex Generative Adversarial Network for Unsupervised Domain Adaptation](http://openaccess.thecvf.com/content_cvpr_2018/papers/Hu_Duplex_Generative_Adversarial_CVPR_2018_paper.pdf)
+4. [Triplet Loss Network for Unsupervised Domain Adaptation](https://www.mdpi.com/1999-4893/12/5/96)
+5. [Domain Adaptation and Domain Generalisation for deployment ready models](https://www.youtube.com/watch?v=xK3LYRE6Xhw)
+6. [Progressive Feature Alignment for Unsupervised Domain Adaptation](http://openaccess.thecvf.com/content_CVPR_2019/html/Chen_Progressive_Feature_Alignment_for_Unsupervised_Domain_Adaptation_CVPR_2019_paper.html)
+7. [Domain Generalization by Solving Jigsaw Puzzles](http://openaccess.thecvf.com/content_CVPR_2019/html/Carlucci_Domain_Generalization_by_Solving_Jigsaw_Puzzles_CVPR_2019_paper.html)
+8. [DLOW: Domain Flow for Adaptation and Generalization](http://openaccess.thecvf.com/content_CVPR_2019/html/Gong_DLOW_Domain_Flow_for_Adaptation_and_Generalization_CVPR_2019_paper.html)
+9. [d-SNE: Domain Adaptation Using Stochastic Neighborhood Embedding](http://openaccess.thecvf.com/content_CVPR_2019/html/Xu_d-SNE_Domain_Adaptation_Using_Stochastic_Neighborhood_Embedding_CVPR_2019_paper.html)</div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-left dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="display:none;"></div>
+    
+
+    <div class="clearfix"></div>
+    <footer class="hidden-print">
+        <div class="container-thiner">
+            <div class="footer">
+                <div class="footer__published-by">
+                    Published on <strong><a href="https://hackmd.io/" target="_blank"><i class="fa fa-file-text"></i> HackMD</a></strong>
+                </div>
+                <div class="footer__views">
+                    <i class="fa fa-eye"></i> <span class="ui-viewcount">1973</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- signin modal -->
+<div class="modal fade signin-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 10px; right: 20px; position: absolute;"><span aria-hidden="true">&times;</span></button>
+            
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<h3>Sign in</h3>
+
+<form data-toggle="validator" role="form" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="dn"><input type="hidden" name="_csrf" value="DMXWwRaJ-YMpf9LC-V9-fg3H1CwZigmRsGwA"></div>
+    <div class="dn"><input type="hidden" name="create_team" value="false"></div>
+    <div class="dn"><input type="hidden" name="create_paid_team" value="false"></div>
+    <div class="form-group  ">
+        <label for="email" class="control-label">Email</label>
+        <label for="inputEmail" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="display: inline;"></span>
+        <div class="input-block">
+            
+                <input type="email" class="form-control" name="email" placeholder="Your email" required autocomplete="email">
+            
+            <span class="error-sign"></span>
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="password" class="control-label">Password</label>
+        <label for="inputPassword" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="display: inline;"></span>
+        <div class="input-block">
+            <input type="password" class="form-control" name="password" placeholder="Your password" required autocomplete="current-password">
+            <span class="error-sign"></span>
+            
+                <span class="control-label pull-right" style="font-size: 13px; margin-top: 5px;"><a href="https://hackmd.io/settings/forgotPassword" style="text-decoration: underline;">Forgot password</a></span>
+            
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 15px; margin-bottom: 0px;">
+        
+            <input type="submit" class="btn btn-success btn-large" formaction="https://hackmd.io/login" value="Sign in">
+        
+
+        
+    </div>
+</form>
+
+
+
+
+
+
+
+
+    
+        <p class="seperator">или</p>
+    
+
+    
+        <p>By clicking below, you agree to our <a href="https://hackmd.io/s/terms" target="_blank">terms of service</a>.</p>
+    
+
+    <div class="social-buttons-container">
+    
+    <a href="https://hackmd.io/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
+        <i class="fa fa-facebook"></i> Войти с помощью Facebook
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/twitter" class="btn btn-lg btn-block btn-social btn-twitter">
+        <i class="fa fa-twitter"></i> Войти с помощью Twitter
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/github" class="btn btn-lg btn-block btn-social btn-github">
+        <i class="fa fa-github"></i> Войти с помощью GitHub
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/dropbox" class="btn btn-lg btn-block btn-social btn-dropbox">
+        <i class="fa fa-dropbox"></i> Войти с помощью Dropbox
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/google" class="btn btn-lg btn-block btn-social btn-google">
+        <i class="icon icon-google"></i> Войти с помощью Google
+    </a>
+    
+    
+</div>
+
+
+
+
+
+    <div >
+        <p>New to HackMD? <a href="https://hackmd.io/join">Sign up</a></p>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-60728495-1"></script>
+<script nonce="09fcc7f9-01cb-4f44-b548-30602ab8568c">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    let userid = (document.cookie.match('(^|; )userid=([^;]*)')||0)[2];
+    gtag('config', 'UA-60728495-1', {'user_id': userid});
+</script>
+<script src="https://browser.sentry-cdn.com/5.15.5/bundle.min.js" crossorigin="anonymous"></script>
+<script nonce="09fcc7f9-01cb-4f44-b548-30602ab8568c">Sentry.init({ dsn: 'https://73410f1915d84abc8b2dd1f1aabd1c82@sentry.hackmd.dev/4', environment: 'production', integrations: function (intrus) { return intrus.filter(function (itr) { return itr.name !== 'TryCatch' }) } });</script>
+
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLW9Z3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+    <script src="https://hackmd.io/api/i18n.js"></script>
+    
+         <script src="https://assets.hackmd.io/build/font-vendor.3c28db3001b8bd6f1d3f.js" defer="defer"></script><script src="https://assets.hackmd.io/build/common-vendor.8e4f4d6aba4d3616fff5.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-vendor.97ba4f331e5cf852bb65.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-common.4898c7d7c1f70fd6fa0c.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty.6e4aeda1326a2a5f5aab.js" defer="defer"></script>
+    
+    
+
+</body>
+</html>
